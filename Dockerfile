@@ -22,6 +22,9 @@ RUN bundle install
 # ホストのカレントディレクトリをコンテナにコピー
 COPY . /matsuken_quiz/
 
+# アセットプリコンパイルを行う
+RUN RAILS_ENV=development bundle exec rake assets:precompile
+
 # entrypoint.shをコンテナ内の/usr/binにコピーし、実行権限を与える
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
