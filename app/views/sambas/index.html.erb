@@ -7,3 +7,19 @@
 <button class="btn">daisyUI</button>
 
 <button class="btn btn-secondary">btn btn-secondary</button>
+
+<h1>例のサンバを当てるゲーム</h1>
+<h2>再生した曲がどれかを選択してください</h2>
+
+<audio controls controlsList="nodownload">
+  <source src="<%= @random_song.preview_url %>" type="audio/mpeg">
+</audio>
+
+<%# 曲のタイトル一覧 %>
+<%= form_with url: check_answer_sambas_path, local: true, method: :post, id: "quiz-form" do |form| %>
+  <% @songs_options.each do |song| %>
+    <%= form.radio_button :song_id, song.id, id: "song_#{song.id}" %>
+    <%= form.label "song_#{song.id}", song.name %><br>
+  <% end %>
+  <%= form.submit '回答' %>
+<% end %>

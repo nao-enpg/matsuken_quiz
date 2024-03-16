@@ -1,0 +1,10 @@
+<% if @correct %>
+  <p>オレ！</p>
+<% else %>
+  <p>ハズレ...</p>
+<% end %>
+
+<p>正解の曲: <%= @random_song.name %></p>
+<%= image_tag(@random_song.album.images.first['url'], alt: @random_song.name) %>  <!-- 正解の画像の表示 -->
+<br>
+<%= link_to 'もう一度挑戦する', sambas_path %>
