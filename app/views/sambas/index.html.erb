@@ -1,27 +1,26 @@
-<button class="bg-gray-900 hover:bg-gray-800 text-white rounded px-4 py-2">tailwind</button>
-
-<button class="btn">daisyUI</button>
-
-<button class="btn btn-secondary">btn btn-secondary</button>
-
-<h1 class="text-3xl font-bold">例のサンバを当てるゲーム</h1>
+<div class="flex flex-col items-center justify-center min-h-screen mx-auto px-4">
+  <h1 class="bg-yellow-500 text-black text-2xl font-bold py-2 px-4 rounded">例のサンバを当てるゲーム</h1>
+  <br>
+  <h2 class="bg-yellow-500 text-black text-2xl font-bold py-2 px-4 rounded">再生された曲を当ててください</h2>
 <br>
-<h2 class="text-2xl font-bold">再生した曲がどれかを選択してください</h2>
+  <div class="audio-controls flex space-x-2">
+    <button id="playButton" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded">
+      Play
+    </button>
+  </div>
+  <audio id="audioPlayer" class="hidden">
+    <source src="<%= @random_song.preview_url %>" type="audio/mpeg">
+  </audio>
 
-<div class="audio-controls flex space-x-2">
-  <button id="playButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-    Play
-  </button>
-</div>
-<audio id="audioPlayer" class="hidden">
-  <source src="<%= @random_song.preview_url %>" type="audio/mpeg">
-</audio>
-
-<%# 曲のタイトル一覧 %>
-<%= form_with url: check_answer_sambas_path, local: true, method: :post, id: "quiz-form" do |form| %>
-  <% @songs_options.each do |song| %>
-    <%= form.radio_button :song_id, song.id, id: "song_#{song.id}" %>
-    <%= form.label "song_#{song.id}", song.name %><br>
+  <%# 曲のタイトル一覧 %>
+  <%= form_with url: check_answer_sambas_path, local: true, method: :post, id: "quiz-form" do |form| %>
+    <% @songs_options.each do |song| %>
+      <div class="song-option bg-yellow-500 hover:bg-yellow-600 active:bg-yellow-400 text-white font-bold py-2 px-4 rounded cursor-pointer my-2" data-song-id="<%= song.id %>">
+        <%= song.name %>
+      </div>
+    <% end %>
+    <%= form.hidden_field :song_id, id: "selected_song_id" %>
+    <div class="flex justify-center items-center">
+      <%= form.submit '回答', class: "bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded" %>
+    </div>
   <% end %>
-  <%= form.submit '回答' %>
-<% end %>

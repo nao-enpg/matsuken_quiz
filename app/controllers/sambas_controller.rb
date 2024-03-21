@@ -10,7 +10,7 @@ class SambasController < ApplicationController
 
   def check_answer
     correct_song_id = session[:random_song_id]
-    session[:correct] = params[:song_id] == correct_song_id # 正解情報をセッションに保存
+    session[:correct] = params[:song_id] == correct_song_id.to_s # 正解情報をセッションに保存
     redirect_to action: :show_result # リダイレクト
   end
 

@@ -1,10 +1,14 @@
-<% if @correct %>
-  <p>オレ！</p>
-<% else %>
-  <p>ハズレ...</p>
-<% end %>
-
-<p>正解の曲: <%= @random_song.name %></p>
-<%= image_tag(@random_song.album.images.first['url'], alt: @random_song.name) %>  <!-- 正解の画像の表示 -->
-<br>
-<%= link_to 'もう一度挑戦する', sambas_path %>
+<div class="flex flex-col items-center justify-center min-h-screen mx-auto px-4">
+  <% if @correct %>
+    <p class="bg-yellow-500 text-white text-2xl py-2 px-4 rounded">オレ！</p>
+  <% else %>
+    <p class="bg-yellow-500 text-white text-2xl py-2 px-4 rounded">ハズレ...</p>
+  <% end %>
+  <br>
+  <p class="bg-yellow-500 text-white text-2xl py-2 px-4 rounded mt-4">正解： <%= @random_song.name %></p>
+  <div class="bg-yellow-500 text-white text-2xl py-2 px-4 rounded mt-4">
+  <%= image_tag(@random_song.album.images.first['url'], alt: @random_song.name, class: "w-full max-w-screen-md mx-auto") %>
+  </div>
+  <br>
+  <%= link_to 'もう一度挑戦する', sambas_path, class: "bg-yellow-500 text-white text-2xl py-2 px-4 rounded mt-4" %>
+</div>

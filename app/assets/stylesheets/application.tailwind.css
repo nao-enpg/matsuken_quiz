@@ -1,3 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body::after {
+    content: '';
+    background-image: url('/assets/6.1.jpeg');
+    background-size: contain;
+    background-position: center;
+    background-attachment: scroll;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+  /* 小さい画面用のスタイル */
+@media (min-width: 640px) { /* smサイズ */
+    body::after {
+      background-size: cover;
+      background-attachment: scroll;
+    }
+  }
+  
+  /* 中くらいの画面用のスタイル */
+  @media (min-width: 768px) { /* mdサイズ */
+    body::after {
+      background-size: cover;
+      background-attachment: scroll;
+    }
+  }
+  
+  /* 大きい画面用のスタイル */
+  @media (min-width: 1024px) { /* lgサイズ */
+    body::after {
+      background-size: cover;
+      background-attachment: scroll;
+    }
+  }
+  
+  /* より大きい画面用のスタイル */
+  @media (min-width: 1280px) { /* xlサイズ */
+    body::after {
+      background-size: cover;
+      background-attachment: scroll;
+    }
+  }
+  
+  /* より大きい画面用のスタイル */
+  @media (min-width: 1536px) { /* 2xlサイズ */
+    body::after {
+      background-size: cover;
+      background-attachment: scroll;
+    }
+  }
