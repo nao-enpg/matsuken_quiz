@@ -2,22 +2,21 @@ class SambasController < ApplicationController
   require 'rspotify'
   RSpotify.authenticate(ENV['SPOTIFY_CLIENT_ID'], ENV['SPOTIFY_SECRET_ID'])
   before_action :set_songs_options, only: [:index, :check_answer]
-  before_action :set_random_song, only: [:index, :check_answer, :show_result] # この行を追加
+  before_action :set_random_song, only: [:index, :check_answer, :show_result]
 
   def index
-    session[:random_song_id] = @random_song.id # 正解の曲IDをセッションに保存
+    session[:random_song_id] = @random_song.id
   end
 
   def check_answer
     correct_song_id = session[:random_song_id]
-    session[:correct] = params[:song_id] == correct_song_id.to_s # 正解情報をセッションに保存
-    redirect_to action: :show_result # リダイレクト
+    session[:correct] = params[:song_id] == correct_song_id.to_s
+    redirect_to action: :show_result
   end
 
-  def show_result # このアクションを追加
-    @correct = session[:correct] # 正解情報をセッションから取得
+  def show_result
+    @correct = session[:correct]
   end
-
 
   private
 
@@ -28,12 +27,20 @@ class SambasController < ApplicationController
   end
 
   def set_random_song
-    unless ['check_answer', 'show_result'].include?(action_name) # check_answerアクションとshow_resultアクションの時は新しい曲をセットしない
+    unless ['check_answer', 'show_result'].include?(action_name)
       random_track_id = Samba::Samba_IDS.sample
       @random_song = RSpotify::Track.find(random_track_id)
-      session[:random_song_id] = random_track_id  # 新しい曲のIDをセッションに保存
+      @preview_url = fetch_preview_url(@random_song) # 変更: @preview_urlインスタンス変数に格納
+      session[:random_song_id] = random_track_id
     else
-      @random_song = RSpotify::Track.find(session[:random_song_id]) # セッションに保存されている曲をセット
+      @random_song = RSpotify::Track.find(session[:random_song_id])
+      @preview_url = fetch_preview_url(@random_song) # 変更: @preview_urlインスタンス変数に格納
+    end
+  end
+
+  def fetch_preview_url(song)
+    Rails.cache.fetch("songs/#{song.id}/preview_url", expires_in: 12.hours) do
+      song.preview_url
     end
   end
 end
