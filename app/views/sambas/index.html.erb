@@ -1,17 +1,19 @@
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-</h1>
-
 <button class="bg-gray-900 hover:bg-gray-800 text-white rounded px-4 py-2">tailwind</button>
 
 <button class="btn">daisyUI</button>
 
 <button class="btn btn-secondary">btn btn-secondary</button>
 
-<h1>例のサンバを当てるゲーム</h1>
-<h2>再生した曲がどれかを選択してください</h2>
+<h1 class="text-3xl font-bold">例のサンバを当てるゲーム</h1>
+<br>
+<h2 class="text-2xl font-bold">再生した曲がどれかを選択してください</h2>
 
-<audio controls controlsList="nodownload">
+<div class="audio-controls flex space-x-2">
+  <button id="playButton" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    Play
+  </button>
+</div>
+<audio id="audioPlayer" class="hidden">
   <source src="<%= @random_song.preview_url %>" type="audio/mpeg">
 </audio>
 
