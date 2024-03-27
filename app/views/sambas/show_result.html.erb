@@ -5,9 +5,9 @@
     <p class="bg-yellow-500 text-white text-2xl py-2 px-4 rounded">ハズレ...</p>
   <% end %>
   <br>
-  <p class="bg-yellow-500 text-white text-2xl py-2 px-4 rounded mt-4">正解： <%= @random_song.name %></p>
+  <p class="bg-yellow-500 text-white text-2xl py-2 px-4 rounded mt-4">正解： <%= @random_song.track_name %></p>
   <div class="bg-yellow-500 text-white text-2xl py-2 px-4 rounded mt-4">
-  <%= image_tag(@random_song.album.images.first['url'], alt: @random_song.name, class: "w-full max-w-screen-md mx-auto") %>
+  <%= image_tag(@random_song.image_url, alt: @random_song.track_name, class: "w-full max-w-screen-md mx-auto") %>
   </div>
   <br>
   <%= link_to 'もう一度挑戦する', sambas_path, class: "bg-yellow-500 text-white text-2xl py-2 px-4 rounded mt-4" %>

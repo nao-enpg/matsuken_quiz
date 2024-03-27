@@ -16,7 +16,7 @@
   <%= form_with url: check_answer_sambas_path, local: true, method: :post, id: "quiz-form" do |form| %>
     <% @songs_options.each do |song| %>
       <div class="song-option bg-yellow-500 hover:bg-yellow-600 active:bg-yellow-400 text-white font-bold py-2 px-4 rounded cursor-pointer my-2" data-song-id="<%= song.id %>">
-        <%= song.name %>
+        <%= song.track_name %>
       </div>
     <% end %>
     <%= form.hidden_field :song_id, id: "selected_song_id" %>
