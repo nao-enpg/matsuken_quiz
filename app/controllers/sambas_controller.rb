@@ -39,7 +39,7 @@ class SambasController < ApplicationController
   end
 
   def fetch_preview_url(song)
-    Rails.cache.fetch("songs/#{song.id}/preview_url", expires_in: 12.hours) do
+    Rails.cache.fetch("songs/#{song.id}/preview_url", expires_in: 2.months) do
       song.preview_url
     end
   end
