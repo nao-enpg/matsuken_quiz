@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>例のサンバを当てるゲーム</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>例のサンバを当てるゲーム</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet">
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-    <%= display_meta_tags(default_meta_tags) %>
-    <%= favicon_link_tag('favicon.ico') %>　
-  </head>
-
-  <body>
-    <%= render "layouts/header" %>
-    <br>
-    <%= yield %>
-    <br>
-    <%= render "layouts/footer" %>
-  </body>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  <%= display_meta_tags(default_meta_tags) %>
+  <%= favicon_link_tag('favicon.ico') %>　
+</head>
+<body style="padding-bottom: 80px;">
+  <%= render "layouts/header" %>
+  <br>
+  <%= yield %>
+  <br>
+  <%= render "layouts/footer" %>
+</body>
 </html>
