@@ -19,7 +19,7 @@ class SambasController < ApplicationController
   private
 
   def set_songs_options
-    @songs_options = Samba.all
+    @songs_options = Samba.order(:id)
   end
 
   def set_random_song

@@ -1,10 +1,10 @@
 <div class="flex flex-col items-center justify-center min-h-screen mx-auto px-4 font-umbrella">
   <h1 class="bg-yellow-500 text-white text-2xl font-bold py-2 px-4 rounded">例のサンバを当てるゲーム</h1>
   <br>
-  <h2 class="bg-yellow-500 text-white text-2xl font-bold py-2 px-4 rounded">再生された曲を当ててください</h2>
+  <h2 class="bg-yellow-500 text-white text-xl font-bold py-2 px-4 rounded">再生された曲を当ててください</h2>
 <br>
   <div class="audio-controls flex space-x-2">
-    <button id="playButton" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded">
+    <button id="playButton" class="bg-white hover:bg-gray-100 text-yellow-500 font-bold py-2 px-4 rounded">
       再生
     </button>
   </div>
@@ -21,6 +21,6 @@
     <% end %>
     <%= form.hidden_field :song_id, id: "selected_song_id" %>
     <div class="flex justify-center items-center">
-      <%= form.submit '回答', class: "bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-2 px-4 rounded" %>
+    <%= form.submit '回答', class: "bg-white hover:bg-gray-100 text-yellow-500 font-bold py-2 px-4 rounded" %>
     </div>
   <% end %>
