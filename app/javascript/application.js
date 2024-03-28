@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     playButton.addEventListener('click', () => {
       if (audioPlayer.paused) {
         audioPlayer.play();
-        playButton.textContent = '停止';
+        playButton.textContent = '踊りをやめる';
       } else {
         audioPlayer.pause();
-        playButton.textContent = '再生';
+        playButton.textContent = '踊る';
       }
     });
   }
