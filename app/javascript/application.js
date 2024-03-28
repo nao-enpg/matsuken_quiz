@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
         playButton.textContent = '踊る';
       }
     });
+
+    audioPlayer.addEventListener('ended', () => {
+      playButton.textContent = '踊る';
+    });
   }
 });
 

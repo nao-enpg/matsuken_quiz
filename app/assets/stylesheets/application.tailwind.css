@@ -5,7 +5,7 @@
 body::after {
     content: '';
     background-image: url('/assets/6.1.jpeg');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-attachment: scroll;
     opacity: 0.5;
