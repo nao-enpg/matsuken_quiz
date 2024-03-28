@@ -4,7 +4,7 @@
 
 body::after {
     content: '';
-    background-image: url('/assets/6.1.jpeg');
+    background-image: url('/assets/samba.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
