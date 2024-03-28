@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     playButton.addEventListener('click', () => {
       if (audioPlayer.paused) {
         audioPlayer.play();
-        playButton.textContent = '踊りをやめる';
+        playButton.textContent = 'おとなしくする';
       } else {
         audioPlayer.pause();
         playButton.textContent = '踊る';

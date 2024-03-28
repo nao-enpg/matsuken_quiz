@@ -1,24 +1,13 @@
-# README
+# 例のサンバを当てるゲーム
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a game where you have to guess a popular song that everyone loves!
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* 開発環境: Docker
+* サーバサイド: Ruby 3.2.2 Rails 7.0.8
+* フロントエンド: HotWire
+* CSSフレームワーク: Tailwind CSS, daisyUI
+* WebAPI: Spotify API
+* Webアプリケーションサーバ: Render
+* データベースサーバ: PostgreSQL
+* VCS: GitHub
+* プロジェクト管理: Backlog
