@@ -1,13 +1,13 @@
-# 例のサンバを当てるゲーム
+# Guess the Famous Samba Hit!
 
 This is a game where you have to guess a popular song that everyone loves!
 
-* 開発環境: Docker
-* サーバサイド: Ruby 3.2.2 Rails 7.0.8
-* フロントエンド: HotWire
-* CSSフレームワーク: Tailwind CSS, daisyUI
-* WebAPI: Spotify API
-* Webアプリケーションサーバ: Render
-* データベースサーバ: PostgreSQL
-* VCS: GitHub
-* プロジェクト管理: Backlog
+* Development Environment: Docker
+* Server Side: Ruby 3.2.2, Rails 7.0.8
+* Frontend: HotWire
+* CSS Framework: Tailwind CSS, daisyUI
+* Web API: Spotify API
+* Web Application Server: Render
+* Database Server: PostgreSQL
+* Version Control System: GitHub
+* Project Management: Backlog
