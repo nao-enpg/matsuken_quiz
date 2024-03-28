@@ -5,6 +5,13 @@ module.exports = {
     './app/assets/stylesheets/**/*.css',
     './app/javascript/**/*.js'
   ],
+  theme: {
+    extend: {
+      fontFamily: {
+        umbrella: ['Yuji Syuku', 'serif']
+      }
+    }
+  },
   plugins: [
     require('daisyui')
   ],
