@@ -8,7 +8,7 @@ class SambasController < ApplicationController
 
   def check_answer
     if params[:song_id].blank?
-      flash[:alert] = '曲を選択してください！'
+      flash[:alert] = '曲をアミーゴしてください'
       redirect_to action: :index
     else
       correct_song_id = session[:random_song_id]

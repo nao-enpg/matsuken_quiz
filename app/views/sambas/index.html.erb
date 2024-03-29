@@ -1,13 +1,11 @@
 <div class="flex flex-col items-center justify-center min-h-screen mx-auto px-4 pb-16 font-samba">
-  <h1 class="bg-yellow-500 text-white text-2xl font-bold py-2 px-4 rounded">例のサンバを当てるゲーム</h1>
-  <br>
-  <h2 class="bg-yellow-500 text-white text-xl font-bold py-2 px-4 rounded">踊った曲を当ててください！</h2>
+  <h1 class="bg-yellow-500 text-white text-2xl font-bold py-2 px-4 my-1 rounded">例のサンバを当てるゲーム</h1>
+  <h2 class="bg-yellow-500 text-white text-xl font-bold py-2 px-4 my-1 rounded">踊った曲を当ててください！</h2>
   <% if flash[:alert] %>
   <div class="alert bg-red-500 text-white text-xl font-bold text-center py-2 px-4 rounded">
     <%= flash[:alert] %>
   </div>
 <% end %>
-  <br>
   <div class="audio-controls flex space-x-2">
     <button id="playButton" class="bg-fuchsia-100 hover:bg-gray-100 text-yellow-500 font-bold py-2 px-4 rounded">
       踊る
