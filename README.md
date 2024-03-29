@@ -1,5 +1,5 @@
 # Guess the Famous Samba Hit!
-<img src="app/assets/images/samba.jpeg" width="500">
+<img src="app/assets/images/ogp.png" width="500">
 
 This is a game where you have to guess a popular song that everyone loves!
 <br>
