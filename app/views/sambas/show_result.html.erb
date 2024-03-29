@@ -1,14 +1,12 @@
 <div class="flex flex-col items-center justify-center min-h-screen mx-auto px-4 font-samba"">
   <% if @correct %>
-    <p class="bg-yellow-500 text-white text-2xl py-2 px-4 rounded">オレ！正解です！</p>
+    <p class="bg-yellow-500 text-white text-2xl py-2 px-4 my-4 rounded">オレ！正解です！</p>
   <% else %>
-    <p class="bg-yellow-500 text-white text-2xl py-2 px-4 rounded">カルナバル...ハズレです</p>
+    <p class="bg-yellow-500 text-white text-2xl py-2 px-4 my-4 rounded">カルナバル...ハズレです</p>
   <% end %>
-  <br>
-  <p class="bg-yellow-500 text-white text-2xl py-2 px-4 rounded mt-4">正解： <%= @random_song.track_name %></p>
-  <div class="bg-yellow-500 text-white text-2xl py-2 px-4 rounded mt-4">
+  <p class="bg-yellow-500 text-white text-2xl py-2 px-4 rounded">正解： <%= @random_song.track_name %></p>
+  <div class="bg-yellow-500 text-white text-2xl py-2 px-4 mt-4 rounded">
   <%= image_tag(@random_song.image_url, alt: @random_song.track_name, class: "w-4/5 max-w-screen-md mx-auto") %>
   </div>
-  <br>
   <%= link_to 'もう一度サンバする', sambas_path, class: "bg-yellow-500 text-white text-2xl py-2 px-4 rounded mt-4" %>
 </div>
