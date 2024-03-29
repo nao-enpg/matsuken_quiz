@@ -14,6 +14,16 @@
   <%= favicon_link_tag('favicon.ico') %>
   <script src="https://kit.fontawesome.com/b5bf160816.js" crossorigin="anonymous"></script>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-280Z418J9X"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-280Z418J9X');
+  </script>
+
 </head>
 <body>
   <%= render "layouts/header" %>
