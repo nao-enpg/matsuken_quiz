@@ -11,5 +11,5 @@
     <%= image_tag(@random_song.image_url, alt: @random_song.track_name, class: "w-4/5 max-w-screen-md mx-auto") %>
   </div>
   <%= link_to 'もう一度サンバする', sambas_path, class: "bg-yellow-500 text-white text-2xl py-2 px-4 rounded mt-4" %>
-  <%= link_to "Xでシェアミーゴする", "https://twitter.com/share?url=#{ERB::Util.url_encode('https://matsuken-quiz.onrender.com/')}&text=#{ERB::Util.url_encode(share_text) + '%0a' + ERB::Util.url_encode('#例のサンバを当てるゲーム') + '%0a' }", target: '_blank' , class: "bg-yellow-500 text-white text-2xl py-2 px-4 rounded mt-4" %>
+  <a href="https://twitter.com/share?url=https%3A%2F%2Fmatsuken-quiz.onrender.com%2F&text=%E3%83%AC%E3%83%83%E3%83%84%E3%82%B5%E3%83%B3%E3%83%90%EF%BC%81%0A%23%E4%BE%8B%E3%81%AE%E3%82%B5%E3%83%B3%E3%83%90%E3%82%92%E5%BD%93%E3%81%A6%E3%82%8B%E3%82%B2%E3%83%BC%E3%83%A0%0A" target="_blank" class="bg-yellow-500 text-white text-2xl py-2 px-4 rounded mt-4">Xでシェアミーゴする</a>
 </div>
