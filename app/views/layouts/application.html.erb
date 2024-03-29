@@ -12,8 +12,10 @@
   <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   <%= display_meta_tags(default_meta_tags) %>
   <%= favicon_link_tag('favicon.ico') %>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css" rel="stylesheet">
+
 </head>
-<body style="padding-bottom: 40px;">
+<body style="padding-bottom: 60px;">
   <%= render "layouts/header" %>
   <%= yield %>
   <%= render "layouts/footer" %>
