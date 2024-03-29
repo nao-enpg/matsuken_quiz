@@ -7,9 +7,14 @@ class SambasController < ApplicationController
   end
 
   def check_answer
-    correct_song_id = session[:random_song_id]
-    session[:correct] = params[:song_id] == correct_song_id.to_s
-    redirect_to action: :show_result
+    if params[:song_id].blank?
+      flash[:alert] = '曲を選択してください！'
+      redirect_to action: :index
+    else
+      correct_song_id = session[:random_song_id]
+      session[:correct] = params[:song_id] == correct_song_id.to_s
+      redirect_to action: :show_result
+    end
   end
 
   def show_result

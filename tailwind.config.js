@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        umbrella: ['Yuji Syuku', 'serif']
+        samba: ['Yuji Syuku', 'serif']
       }
     }
   },
