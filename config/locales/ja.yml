@@ -1,0 +1,22 @@
+ja:
+  samba_hit: "Guess the Famous Samba Hit!"
+  terms_of_use: "Terms of Use"
+  privacy_policy: "Privacy Policy"
+  contact: "Contact:"
+  all_lights_received: "Ⓢ 2024 Guess the Famous Samba Hit! All lights received."
+
+  sambas:
+    title: "例のサンバを当てるゲーム"
+    subtitle: "踊った曲を当ててください！"
+    play_button: "踊る"
+    submit_button: "ビバサンバ"
+    alert: "アラートメッセージ"
+    please_select_song: "曲をアミーゴしてください"
+
+  show_result:
+    correct: "オレ！正解です！"
+    wrong: "カルナバル...ハズレです"
+    correct_answer: "正解："
+    try_again: "もう一度サンバする"
+    share: "Xでシェアミーゴする"
+    share_hashtag: "#例のサンバを当てるゲーム"

@@ -1,9 +1,11 @@
 <div class="flex justify-between items-center bg-yellow-500 text-black py-1 px-4 font-samba">
   <div>
-  <%= link_to 'Guess the Famous Samba Hit!', root_path, class: 'font-samba' %>
+  <%= link_to I18n.t('samba_hit'), root_path, class: 'font-samba text-base' %>　
+  <%= link_to 'Japanese', url_for(locale: :ja), class: 'font-samba text-xs' %> |
+  <%= link_to 'Português', url_for(locale: :pt), class: 'font-samba text-xs' %>
   </div>
   <div>
-  <%= link_to 'Terms of Use', terms_of_service_path, class: 'font-samba text-xs' %>　
-  <%= link_to 'Privacy Policy', privacy_policy_path, class: 'font-samba text-xs' %>
+  <%= link_to I18n.t('terms_of_use'), terms_of_service_path, class: 'font-samba text-xs' %>　
+  <%= link_to I18n.t('privacy_policy'), privacy_policy_path, class: 'font-samba text-xs' %>
   </div>
 </div>

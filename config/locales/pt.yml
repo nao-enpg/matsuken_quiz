@@ -1,0 +1,22 @@
+pt:
+  samba_hit: "Adivinhe o Hit de Samba Famoso!"
+  terms_of_use: "Termos de Uso"
+  privacy_policy: "Política de Privacidade"
+  contact: "Contato:"
+  all_lights_received: "Ⓢ 2024 Adivinhe o Hit de Samba Famoso! Todos os luzes recebidos."
+
+  sambas:
+    title: "O jogo de adivinhar a Samba"
+    subtitle: "Adivinhe a música que você dançou!"
+    play_button: "Dançar"
+    submit_button: "Viva a Samba"
+    alert: "Mensagem de alerta"
+    please_select_song: "Por favor, selecione uma música"
+
+  show_result:
+    correct: "Olé! Correto!"
+    wrong: "Carnaval... Errado"
+    correct_answer: "Resposta correta:"
+    try_again: "Dançar samba novamente"
+    share: "Compartilhar no X"
+    share_hashtag: "#OJogoDeAdivinhaçãoDeSamba"
