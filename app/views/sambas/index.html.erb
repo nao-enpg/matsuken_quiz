@@ -20,7 +20,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-1">
       <% @songs_options.each do |song| %>
         <div class="song-option bg-yellow-500 hover:bg-yellow-600 active:bg-yellow-400 text-white font-bold py-2 px-4 rounded cursor-pointer my-1 text-sm sm:text-base" data-song-id="<%= song.id %>">
-          <%= song.track_name %>
+        <%= I18n.t("songs.#{song.id}.track_name", default: song.track_name) %>
         </div>
     <% end %>
     </div>

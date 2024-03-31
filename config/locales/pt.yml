@@ -20,3 +20,25 @@ pt:
     try_again: "Dançar samba novamente"
     share: "Compartilhar no X"
     share_hashtag: "#OJogoDeAdivinhaçãoDeSamba"
+
+  songs:
+    '1':
+      track_name: "Samba I de Ma◯ken"
+    '2':
+      track_name: "Samba II de Ma◯ken"
+    '3':
+      track_name: "Versão curta do Samba II de Ma◯ken"
+    '4':
+      track_name: "Karaokê Original Samba II de Ma◯ken"
+    '5':
+      track_name: "Samba II de Ma◯ken - READYMADE SHOGUN MIX 2004"
+    '6':
+      track_name: "Samba II de Ma◯ken - versão em inglês."
+    '7':
+      track_name: "Samba III de Ma◯ken"
+    '8':
+      track_name: "EDM de Ma◯ken"
+    '9':
+      track_name: "Caril de Ma◯ken"
+    '10':
+      track_name: "Parapara de Ma◯ken ~ Jogo Oresama ~"

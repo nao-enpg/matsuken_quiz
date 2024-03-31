@@ -6,7 +6,7 @@
     <p class="bg-yellow-500 text-white text-2xl py-1 px-4 my-2 rounded"><%= t('show_result.wrong') %></p>
     <% share_text = t('show_result.wrong') %>
   <% end %>
-  <p class="bg-yellow-500 text-white text-2xl py-2 px-4 rounded"><%= t('show_result.correct_answer') %> <%= @random_song.track_name %></p>
+  <p class="bg-yellow-500 text-white text-2xl py-2 px-4 rounded"><%= t('show_result.correct_answer') %> <%= I18n.t("songs.#{@random_song.id}.track_name", default: @random_song.track_name) %></p>
   <div class="bg-yellow-500 text-white text-2xl py-2 px-4 mt-4 rounded">
     <%= image_tag(@random_song.image_url, alt: @random_song.track_name, class: "w-4/5 max-w-screen-md mx-auto") %>
   </div>
