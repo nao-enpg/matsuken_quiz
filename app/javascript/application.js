@@ -1,3 +1,20 @@
+const translations = {
+  ja: {
+    play: "踊る",
+    pause: "おとなしくする",
+  },
+  pt: {
+    play: "Dançar",
+    pause: "Parar",
+  }
+};
+
+const lang = document.documentElement.lang;
+
+function translate(key) {
+  return translations[lang] ? translations[lang][key] : key;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const playButton = document.getElementById('playButton');
   const audioPlayer = document.getElementById('audioPlayer');
@@ -6,15 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
     playButton.addEventListener('click', () => {
       if (audioPlayer.paused) {
         audioPlayer.play();
-        playButton.textContent = 'おとなしくする';
+        playButton.textContent = translate('pause');
       } else {
         audioPlayer.pause();
-        playButton.textContent = '踊る';
+        playButton.textContent = translate('play');
       }
     });
 
     audioPlayer.addEventListener('ended', () => {
-      playButton.textContent = '踊る';
+      playButton.textContent = translate('play');
     });
   }
 });
