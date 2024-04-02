@@ -12,6 +12,8 @@ pt:
     submit_button: "Viva a Samba"
     alert: "Mensagem de alerta"
     please_select_song: "Por favor, selecione uma música"
+    neko: "Modo Gato Samba"
+    normal: "Voltar para o Samba normal"
 
   show_result:
     correct: "Olé! Correto!"
@@ -42,3 +44,20 @@ pt:
       track_name: "Caril de Ma◯ken"
     '10':
       track_name: "Parapara de Ma◯ken ~ Jogo Oresama ~"
+
+  nekosamba:
+    title: "Adivinhe o Samba do Gato"
+    subtitle: "Acerte a música dançante, miau!"
+    play_button: "Dançar"
+    submit_button: "Miau"
+    alert: "Mensagem de alerta"
+    please_select_song: "Por favor, escolha uma música, amigo"
+
+  neko_result:
+    correct: "Ei! Acertou, miau!"
+    wrong: "Carnaval... Errou, miau"
+    correct_answer: "Resposta correta:"
+    try_again: "Tente o Samba novamente, miau"
+    share: "Compartilhe com X, amigo, miau"
+    share_hashtag: "#AdivinheOSambaDoGato"
+    consecutive_correct: "Acertos consecutivos: %{count}, miau!"

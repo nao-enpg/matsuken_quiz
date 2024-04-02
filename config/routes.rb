@@ -8,4 +8,11 @@ Rails.application.routes.draw do
       get :show_result
     end
   end
+
+  resources :nekosamba, only: [:index] do
+    collection do
+      post :check_answer
+      get :show_result
+    end
+  end
 end

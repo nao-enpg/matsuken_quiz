@@ -12,6 +12,8 @@ ja:
     submit_button: "ビバサンバ"
     alert: "アラートメッセージ"
     please_select_song: "曲をアミーゴしてください"
+    neko: "ねこサンバモード"
+    normal: "通常サンバに戻る"
 
   show_result:
     correct: "オレ！正解です！"
@@ -20,3 +22,20 @@ ja:
     try_again: "もう一度サンバする"
     share: "Xでシェアミーゴする"
     share_hashtag: "#例のサンバを当てるゲーム"
+
+  nekosamba:
+    title: "ねこサンバを当てるゲーム"
+    subtitle: "踊った曲を当てるにゃ！"
+    play_button: "踊る"
+    submit_button: "にゃ"
+    alert: "アラートメッセージ"
+    please_select_song: "曲をアミーゴするにゃ"
+
+  neko_result:
+    correct: "オレ！正解にゃ！"
+    wrong: "カルナバル...ハズレにゃ"
+    correct_answer: "正解："
+    try_again: "もう一度サンバにゃ"
+    share: "Xでシェアミーゴにゃ"
+    share_hashtag: "#ねこサンバを当てるゲーム"
+    consecutive_correct: "%{count}回連続正解にゃ！"

@@ -1,0 +1,21 @@
+<% content_for :body_class, 'nekosamba-background' %>
+
+<div class="flex flex-col items-center justify-center min-h-screen mx-auto px-4 font-nekosamba">
+  <% if @correct %>
+    <p class="bg-red-300 text-white text-2xl py-1 px-4 my-2 rounded"><%= t('neko_result.correct') %></p>
+    <% share_text = t('neko_result.correct') %>
+  <% else %>
+    <p class="bg-red-300 text-white text-2xl py-1 px-4 my-2 rounded"><%= t('neko_result.wrong') %></p>
+    <% share_text = t('neko_result.wrong') %>
+  <% end %>
+  <p class="bg-red-300 text-white text-2xl py-2 px-4 rounded"><%= t('neko_result.correct_answer') %> <%= I18n.t("songs.#{@random_song.id}.track_name.to_pad", default: @random_song.track_name.to_pad) %></p>
+  <div class="bg-red-300 text-white text-2xl py-2 px-4 mt-4 rounded">
+    <%= image_tag(@random_song.image_url, alt: @random_song.track_name, class: "w-4/5 max-w-screen-md mx-auto") %>
+  </div>
+  <div class="bg-red-300 text-black text-s max-w-xs text-center py-2 px-4 rounded">
+  <%= t('neko_result.consecutive_correct', count: @count) %>
+  </div>
+  <%= link_to t('neko_result.try_again'), nekosamba_index_path, class: "bg-red-300 text-white text-2xl py-2 px-4 rounded mt-4" %>
+  <%= link_to t('neko_result.share'), "https://twitter.com/share?url=#{ERB::Util.url_encode('https://matsuken-quiz.onrender.com/nekosamba')}&text=#{ERB::Util.url_encode(@share_text) + '%0a' + ERB::Util.url_encode(t('neko_result.share_hashtag')) + '%0a' }", target: '_blank', class: "bg-red-300 text-white text-2xl py-2 px-4 rounded mt-4" %>
+
+</div>

@@ -44,11 +44,24 @@ document.addEventListener('DOMContentLoaded', () => {
       songOptions.forEach(opt => {
         opt.classList.remove('bg-yellow-400');
         opt.classList.add('bg-yellow-500');
-        opt.classList.remove('hover:bg-yellow-600');
-        opt.classList.add('hover:bg-yellow-600');
       });
       this.classList.remove('bg-yellow-500');
       this.classList.add('bg-yellow-300');
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const songOptions = document.querySelectorAll('.nekosong-option');
+
+  songOptions.forEach(option => {
+    option.addEventListener('click', function() {
+      songOptions.forEach(opt => {
+        opt.classList.remove('bg-red-400');
+        opt.classList.add('bg-red-300');
+      });
+      this.classList.remove('bg-red-300');
+      this.classList.add('bg-red-100');
     });
   });
 });
@@ -63,6 +76,16 @@ document.addEventListener('DOMContentLoaded', () => {
   songOptions.forEach(option => {
     option.addEventListener('click', function() {
       // 選択された曲のIDをhidden_fieldにセット
+      selectedSongIdField.value = this.dataset.songId;
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const songOptions = document.querySelectorAll('.nekosong-option');
+  const selectedSongIdField = document.getElementById('selected_song_id');
+  songOptions.forEach(option => {
+    option.addEventListener('click', function() {
       selectedSongIdField.value = this.dataset.songId;
     });
   });

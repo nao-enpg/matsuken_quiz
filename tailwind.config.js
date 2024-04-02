@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        samba: ['Yuji Syuku', 'serif']
+        samba: ['Yuji Syuku', 'serif'],
+        nekosamba: ['Hachi Maru Pop', 'cursive'],
       }
     }
   },
@@ -17,7 +18,6 @@ module.exports = {
   ],
   daisyui: {
     themes: [
-    
     ],
   },
 }
