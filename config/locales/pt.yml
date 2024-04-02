@@ -52,6 +52,7 @@ pt:
     submit_button: "Miau"
     alert: "Mensagem de alerta"
     please_select_song: "Por favor, escolha uma música, amigo"
+    consecutive_correct: "Respondidas corretamente %{count} vezes seguidas!"
 
   neko_result:
     correct: "Ei! Acertou, miau!"

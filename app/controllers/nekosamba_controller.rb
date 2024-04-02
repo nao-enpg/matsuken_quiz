@@ -9,6 +9,7 @@ class NekosambaController < ApplicationController
     end
     session[:random_song_id] = @random_song.id
     session[:continuous_correct_answers] ||= 0
+    @count = session[:continuous_correct_answers]
   end
 
   def check_answer

@@ -30,6 +30,7 @@ ja:
     submit_button: "にゃ"
     alert: "アラートメッセージ"
     please_select_song: "曲をアミーゴするにゃ"
+    consecutive_correct: "%{count}回連続正解中にゃ！"
 
   neko_result:
     correct: "オレ！正解にゃ！"
