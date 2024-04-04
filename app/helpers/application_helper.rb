@@ -19,7 +19,6 @@ module ApplicationHelper
         },
         twitter: {
           card: 'summary_large_image',
-          site: '@nao_enpg',
           image: image_url('ogp.png')
         }
       }
