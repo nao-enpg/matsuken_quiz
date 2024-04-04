@@ -15,7 +15,7 @@ body::after {
     bottom: 0;
     left: 0;
     z-index: -1;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 .nekosamba-background::after {
@@ -31,5 +31,5 @@ body::after {
     bottom: 0;
     left: 0;
     z-index: -1;
-    min-height: 100vh;
+    min-height: 90vh;
 }
